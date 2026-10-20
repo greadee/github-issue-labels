@@ -1,0 +1,107 @@
+[
+  {
+    "name": "low",
+    "color": "F8B4B4",
+    "description": "Low priority"
+  },
+  {
+    "name": "medium",
+    "color": "EF7373",
+    "description": "Medium priority"
+  },
+  {
+    "name": "high",
+    "color": "DC3434",
+    "description": "High priority"
+  },
+  {
+    "name": "critical",
+    "color": "990F1F",
+    "description": "Critical priority; requires immediate attention"
+  },
+  {
+    "name": "deferred",
+    "color": "9CA3AF",
+    "description": "Postponed for later consideration"
+  },
+  {
+    "name": "chore",
+    "color": "6B7280",
+    "description": "Routine maintenance or housekeeping"
+  },
+  {
+    "name": "bug",
+    "color": "703070",
+    "description": "Something is not working as expected"
+  },
+  {
+    "name": "feature",
+    "color": "BF7FBF",
+    "description": "New functionality"
+  },
+  {
+    "name": "enhancement",
+    "color": "68A9E8",
+    "description": "Improvement to existing functionality"
+  },
+  {
+    "name": "documentation",
+    "color": "153E75",
+    "description": "Documentation additions or improvements"
+  },
+  {
+    "name": "testing",
+    "color": "8B5CF6",
+    "description": "Tests, test coverage, or quality verification"
+  },
+  {
+    "name": "revision",
+    "color": "A4C8F0",
+    "description": "Changes or rework to existing implementation"
+  },
+  {
+    "name": "design",
+    "color": "397BC6",
+    "description": "Design, user experience, or architecture work"
+  },
+  {
+    "name": "ci/cd",
+    "color": "FFFDD0",
+    "description": "Continuous integration, delivery, or deployment"
+  },
+  {
+    "name": "tracking",
+    "color": "2A9D8F",
+    "description": "Tracks ongoing work, progress, or follow-up"
+  },
+  {
+    "name": "help wanted",
+    "color": "FFD700",
+    "description": "Contributions or additional assistance welcome"
+  },
+  {
+    "name": "question",
+    "color": "FFF3B0",
+    "description": "A question or clarification is needed"
+  },
+  {
+    "name": "in-progress",
+    "color": "238636",
+    "description": "Work is actively underway"
+  },
+  {
+    "name": "ready",
+    "color": "A7E8A1",
+    "description": "Ready for work to begin"
+  },
+  {
+    "name": "parent",
+    "color": "C65D0A",
+    "description": "Tracks a larger body of work with child issues"
+  },
+  {
+    "name": "child",
+    "color": "FFC078",
+    "description": "A subtask belonging to a parent issue"
+  }
+]
