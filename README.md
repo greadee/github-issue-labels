@@ -1,6 +1,6 @@
 # GitHub labels template
 
-A reusable set of 26 GitHub issue and pull request labels, with two Bash scripts
+A reusable set of 28 GitHub issue and pull request labels, with two Bash scripts
 to apply the template or clear an existing repository's labels.
 
 ## Previews
@@ -21,7 +21,7 @@ Both previews are lossless PNG files.
 
 | File | Purpose |
 | --- | --- |
-| [labels.json](labels.json) | Portable JSON template containing all 26 label names, colors, and descriptions. |
+| [labels.json](labels.json) | Portable JSON template containing all 28 label names, colors, and descriptions. |
 | [labels/](labels) | Category files that contain the label definitions used by the apply script. |
 | [apply-labels.sh](apply-labels.sh) | Creates or updates labels from the category files. |
 | [clear-labels.sh](clear-labels.sh) | Deletes every label in the selected repositories. |
@@ -106,7 +106,6 @@ to see its usage.
 ## Label reference
 
 The template is available in `labels.json` and the category files under `labels/`.
-`blocked` is intentionally excluded.
 
 | Label | Hex color | Description |
 | --- | --- | --- |
@@ -136,6 +135,8 @@ The template is available in `labels.json` and the category files under `labels/
 | `ready` | `#A7E8A1` | Ready for work to begin |
 | `parent` | `#C65D0A` | Tracks a larger body of work with child issues |
 | `child` | `#FFC078` | A subtask belonging to a parent issue |
+| `blocking` | `#B91C1C` | Blocks other work from progressing |
+| `blocked` | `#9A3412` | Blocked by other work |
 
 ## Customize the template
 
