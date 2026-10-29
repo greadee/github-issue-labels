@@ -115,9 +115,19 @@
     "description": "A question or clarification is needed"
   },
   {
+    "name": "need-review",
+    "color": "F59E0B",
+    "description": "Awaiting review"
+  },
+  {
     "name": "in-progress",
     "color": "238636",
     "description": "Work is actively underway"
+  },
+  {
+    "name": "can-close",
+    "color": "0E7490",
+    "description": "Work is complete and can be closed"
   },
   {
     "name": "ready",
