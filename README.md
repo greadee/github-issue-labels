@@ -1,6 +1,6 @@
 # GitHub labels template
 
-A reusable set of 21 GitHub issue and pull request labels, with two Bash scripts
+A reusable set of 26 GitHub issue and pull request labels, with two Bash scripts
 to apply the template or clear an existing repository's labels.
 
 ## Previews
@@ -21,7 +21,7 @@ Both previews are lossless PNG files.
 
 | File | Purpose |
 | --- | --- |
-| [labels.json](labels.json) | Portable JSON template containing all 21 label names, colors, and descriptions. |
+| [labels.json](labels.json) | Portable JSON template containing all 26 label names, colors, and descriptions. |
 | [labels/](labels) | Category files that contain the label definitions used by the apply script. |
 | [apply-labels.sh](apply-labels.sh) | Creates or updates labels from the category files. |
 | [clear-labels.sh](clear-labels.sh) | Deletes every label in the selected repositories. |
@@ -115,6 +115,11 @@ The template is available in `labels.json` and the category files under `labels/
 | `high` | `#DC3434` | High priority |
 | `critical` | `#990F1F` | Critical priority; requires immediate attention |
 | `deferred` | `#9CA3AF` | Postponed for later consideration |
+| `XS` | `#DBEAFE` | Extra small effort or scope |
+| `S` | `#93C5FD` | Small effort or scope |
+| `M` | `#3B82F6` | Medium effort or scope |
+| `L` | `#2563EB` | Large effort or scope |
+| `XL` | `#1E3A8A` | Extra large effort or scope |
 | `chore` | `#6B7280` | Routine maintenance or housekeeping |
 | `bug` | `#703070` | Something is not working as expected |
 | `feature` | `#BF7FBF` | New functionality |

@@ -1,0 +1,6 @@
+# Effort or scope size labels, ordered from smallest to largest.
+XS|DBEAFE|Extra small effort or scope
+S|93C5FD|Small effort or scope
+M|3B82F6|Medium effort or scope
+L|2563EB|Large effort or scope
+XL|1E3A8A|Extra large effort or scope

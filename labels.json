@@ -25,6 +25,31 @@
     "description": "Postponed for later consideration"
   },
   {
+    "name": "XS",
+    "color": "DBEAFE",
+    "description": "Extra small effort or scope"
+  },
+  {
+    "name": "S",
+    "color": "93C5FD",
+    "description": "Small effort or scope"
+  },
+  {
+    "name": "M",
+    "color": "3B82F6",
+    "description": "Medium effort or scope"
+  },
+  {
+    "name": "L",
+    "color": "2563EB",
+    "description": "Large effort or scope"
+  },
+  {
+    "name": "XL",
+    "color": "1E3A8A",
+    "description": "Extra large effort or scope"
+  },
+  {
     "name": "chore",
     "color": "6B7280",
     "description": "Routine maintenance or housekeeping"

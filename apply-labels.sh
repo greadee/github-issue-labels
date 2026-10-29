@@ -6,7 +6,7 @@ set -euo pipefail
 
 script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 labels_dir="$script_dir/labels"
-category_order=(priority relationships type state collab)
+category_order=(priority size relationships type state collab)
 
 dry_run=false
 if [[ "${1:-}" == "--dry-run" ]]; then dry_run=true; shift; fi
