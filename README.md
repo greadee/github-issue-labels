@@ -1,6 +1,6 @@
 # GitHub labels template
 
-A reusable set of 31 GitHub issue and pull request labels, with two Bash scripts
+A reusable set of 33 GitHub issue and pull request labels, with two Bash scripts
 to apply the template or clear an existing repository's labels.
 
 ## Previews
@@ -21,7 +21,7 @@ Both previews are lossless PNG files.
 
 | File | Purpose |
 | --- | --- |
-| [labels.json](labels.json) | Portable JSON template containing all 31 label names, colors, and descriptions. |
+| [labels.json](labels.json) | Portable JSON template containing all 33 label names, colors, and descriptions. |
 | [labels/](labels) | Category files that contain the label definitions used by the apply script. |
 | [apply-labels.sh](apply-labels.sh) | Creates or updates labels from the category files. |
 | [clear-labels.sh](clear-labels.sh) | Deletes every label in the selected repositories. |
@@ -132,6 +132,8 @@ The template is available in `labels.json` and the category files under `labels/
 | `tracking` | `#2A9D8F` | Tracks ongoing work, progress, or follow-up |
 | `help wanted` | `#FFD700` | Contributions or additional assistance welcome |
 | `question` | `#FFF3B0` | A question or clarification is needed |
+| `wontfix` | `#57534E` | This will not be worked on |
+| `duplicate` | `#A8A29E` | This duplicates another issue |
 | `need-review` | `#F59E0B` | Awaiting review |
 | `in-progress` | `#238636` | Work is actively underway |
 | `can-close` | `#0E7490` | Work is complete and can be closed |

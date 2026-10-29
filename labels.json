@@ -115,6 +115,16 @@
     "description": "A question or clarification is needed"
   },
   {
+    "name": "wontfix",
+    "color": "57534E",
+    "description": "This will not be worked on"
+  },
+  {
+    "name": "duplicate",
+    "color": "A8A29E",
+    "description": "This duplicates another issue"
+  },
+  {
     "name": "need-review",
     "color": "F59E0B",
     "description": "Awaiting review"
