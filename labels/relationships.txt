@@ -1,0 +1,3 @@
+# Relationships between issues.
+parent|C65D0A|Tracks a larger body of work with child issues
+child|FFC078|A subtask belonging to a parent issue

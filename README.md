@@ -22,7 +22,8 @@ Both previews are lossless PNG files.
 | File | Purpose |
 | --- | --- |
 | [labels.json](labels.json) | Portable JSON template containing all 21 label names, colors, and descriptions. |
-| [apply-labels.sh](apply-labels.sh) | Contains the template and creates or updates its labels. |
+| [labels/](labels) | Category files that contain the label definitions used by the apply script. |
+| [apply-labels.sh](apply-labels.sh) | Creates or updates labels from the category files. |
 | [clear-labels.sh](clear-labels.sh) | Deletes every label in the selected repositories. |
 | [github-label-colors.png](github-label-colors.png) | Lossless color chart with names and hex codes, ordered by color. |
 | [github-label-pills.png](github-label-pills.png) | Lossless browser-rendered preview using GitHub's label component styles in dark and light themes. |
@@ -104,7 +105,7 @@ to see its usage.
 
 ## Label reference
 
-The template is available in `labels.json` and embedded in `apply-labels.sh`.
+The template is available in `labels.json` and the category files under `labels/`.
 `blocked` is intentionally excluded.
 
 | Label | Hex color | Description |
@@ -133,16 +134,17 @@ The template is available in `labels.json` and embedded in `apply-labels.sh`.
 
 ## Customize the template
 
-Edit the lines between `done <<'LABELS'` and the closing `LABELS` in
-`apply-labels.sh`. Each line has this format:
+Edit the category files under `labels/`. Each line has this format:
 
 ```text
 name|RRGGBB|Description
 ```
 
+Categories are applied in this order: priority, relationships, type, state, and
+collab. A label may appear in more than one category; it is applied only once.
 Use a six-digit hex color without `#`. Keep each label on one line and avoid `|`
-in names or descriptions. Keep `labels.json` synchronized with the embedded template. Reapply the script
-to update your repositories.
+in names or descriptions. Keep `labels.json` synchronized with the category files.
+Reapply the script to update your repositories.
 Removing a template entry does not delete an existing repository label.
 The PNG previews are static exports and must be regenerated after template changes.
 

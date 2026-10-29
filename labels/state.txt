@@ -1,0 +1,5 @@
+# The current state of an issue or pull request.
+in-progress|238636|Work is actively underway
+ready|A7E8A1|Ready for work to begin
+# Shared with the type category.
+tracking|2A9D8F|Tracks ongoing work, progress, or follow-up

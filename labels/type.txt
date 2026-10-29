@@ -1,0 +1,11 @@
+# The kind of work an issue or pull request represents.
+tracking|2A9D8F|Tracks ongoing work, progress, or follow-up
+documentation|153E75|Documentation additions or improvements
+design|397BC6|Design, user experience, or architecture work
+revision|A4C8F0|Changes or rework to existing implementation
+testing|8B5CF6|Tests, test coverage, or quality verification
+bug|703070|Something is not working as expected
+feature|BF7FBF|New functionality
+enhancement|68A9E8|Improvement to existing functionality
+chore|6B7280|Routine maintenance or housekeeping
+ci/cd|FFFDD0|Continuous integration, delivery, or deployment
