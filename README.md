@@ -1,6 +1,6 @@
 # GitHub labels template
 
-A reusable set of 28 GitHub issue and pull request labels, with two Bash scripts
+A reusable set of 29 GitHub issue and pull request labels, with two Bash scripts
 to apply the template or clear an existing repository's labels.
 
 ## Previews
@@ -21,7 +21,7 @@ Both previews are lossless PNG files.
 
 | File | Purpose |
 | --- | --- |
-| [labels.json](labels.json) | Portable JSON template containing all 28 label names, colors, and descriptions. |
+| [labels.json](labels.json) | Portable JSON template containing all 29 label names, colors, and descriptions. |
 | [labels/](labels) | Category files that contain the label definitions used by the apply script. |
 | [apply-labels.sh](apply-labels.sh) | Creates or updates labels from the category files. |
 | [clear-labels.sh](clear-labels.sh) | Deletes every label in the selected repositories. |
@@ -113,6 +113,7 @@ The template is available in `labels.json` and the category files under `labels/
 | `medium` | `#EF7373` | Medium priority |
 | `high` | `#DC3434` | High priority |
 | `critical` | `#990F1F` | Critical priority; requires immediate attention |
+| `now` | `#E11D48` | Needs to be addressed now |
 | `deferred` | `#9CA3AF` | Postponed for later consideration |
 | `XS` | `#DBEAFE` | Extra small effort or scope |
 | `S` | `#93C5FD` | Small effort or scope |

@@ -20,6 +20,11 @@
     "description": "Critical priority; requires immediate attention"
   },
   {
+    "name": "now",
+    "color": "E11D48",
+    "description": "Needs to be addressed now"
+  },
+  {
     "name": "deferred",
     "color": "9CA3AF",
     "description": "Postponed for later consideration"
