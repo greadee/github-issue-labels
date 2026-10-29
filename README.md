@@ -69,6 +69,39 @@ If executable permissions were lost when copying the files, run:
 chmod +x apply-labels.sh clear-labels.sh
 ```
 
+## Apply a subset of labels
+
+By default `apply-labels.sh` applies every category. Pass one or more category
+options to apply only those labels:
+
+```sh
+./apply-labels.sh --priority --state OWNER/REPO
+./apply-labels.sh --size OWNER/REPO
+```
+
+Available categories, in application order:
+
+| Option | Labels |
+| --- | --- |
+| `--priority` | low, medium, high, critical, now, deferred |
+| `--size` | XS, S, M, L, XL |
+| `--relationships` | parent, child, blocking, blocked |
+| `--type` | tracking, documentation, design, revision, testing, bug, feature, enhancement, chore, ci/cd |
+| `--state` | need-review, in-progress, tracking, can-close, ready |
+| `--collab` | help wanted, question, wontfix, duplicate |
+
+`documentation` is the existing name for docs, and `medium` is the existing name
+for med. Categories are applied in the order shown, regardless of the order of
+the options. A label shared by multiple selected categories is applied once.
+
+Use `--all` to reset the selection to every category:
+
+```sh
+./apply-labels.sh --priority --all OWNER/REPO
+```
+
+Category options work with `--dry-run` and multiple repositories.
+
 ## Replace all existing labels
 
 **Clearing deletes every repository label, including automatically generated labels,
@@ -151,8 +184,8 @@ Edit the category files under `labels/`. Each line has this format:
 name|RRGGBB|Description
 ```
 
-Categories are applied in this order: priority, relationships, type, state, and
-collab. A label may appear in more than one category; it is applied only once.
+Categories are applied in this order: priority, size, relationships, type, state,
+and collab. A label may appear in more than one category; it is applied only once.
 Use a six-digit hex color without `#`. Keep each label on one line and avoid `|`
 in names or descriptions. Keep `labels.json` synchronized with the category files.
 Reapply the script to update your repositories.
