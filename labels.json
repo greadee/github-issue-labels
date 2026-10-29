@@ -55,9 +55,49 @@
     "description": "Extra large effort or scope"
   },
   {
-    "name": "chore",
-    "color": "6B7280",
-    "description": "Routine maintenance or housekeeping"
+    "name": "parent",
+    "color": "C65D0A",
+    "description": "Tracks a larger body of work with child issues"
+  },
+  {
+    "name": "child",
+    "color": "FFC078",
+    "description": "A subtask belonging to a parent issue"
+  },
+  {
+    "name": "blocking",
+    "color": "B91C1C",
+    "description": "Blocks other work from progressing"
+  },
+  {
+    "name": "blocked",
+    "color": "9A3412",
+    "description": "Blocked by other work"
+  },
+  {
+    "name": "tracking",
+    "color": "2A9D8F",
+    "description": "Tracks ongoing work, progress, or follow-up"
+  },
+  {
+    "name": "documentation",
+    "color": "153E75",
+    "description": "Documentation additions or improvements"
+  },
+  {
+    "name": "design",
+    "color": "397BC6",
+    "description": "Design, user experience, or architecture work"
+  },
+  {
+    "name": "revision",
+    "color": "A4C8F0",
+    "description": "Changes or rework to existing implementation"
+  },
+  {
+    "name": "testing",
+    "color": "8B5CF6",
+    "description": "Tests, test coverage, or quality verification"
   },
   {
     "name": "bug",
@@ -75,54 +115,14 @@
     "description": "Improvement to existing functionality"
   },
   {
-    "name": "documentation",
-    "color": "153E75",
-    "description": "Documentation additions or improvements"
-  },
-  {
-    "name": "testing",
-    "color": "8B5CF6",
-    "description": "Tests, test coverage, or quality verification"
-  },
-  {
-    "name": "revision",
-    "color": "A4C8F0",
-    "description": "Changes or rework to existing implementation"
-  },
-  {
-    "name": "design",
-    "color": "397BC6",
-    "description": "Design, user experience, or architecture work"
+    "name": "chore",
+    "color": "6B7280",
+    "description": "Routine maintenance or housekeeping"
   },
   {
     "name": "ci/cd",
     "color": "FFFDD0",
     "description": "Continuous integration, delivery, or deployment"
-  },
-  {
-    "name": "tracking",
-    "color": "2A9D8F",
-    "description": "Tracks ongoing work, progress, or follow-up"
-  },
-  {
-    "name": "help wanted",
-    "color": "FFD700",
-    "description": "Contributions or additional assistance welcome"
-  },
-  {
-    "name": "question",
-    "color": "FFF3B0",
-    "description": "A question or clarification is needed"
-  },
-  {
-    "name": "wontfix",
-    "color": "57534E",
-    "description": "This will not be worked on"
-  },
-  {
-    "name": "duplicate",
-    "color": "A8A29E",
-    "description": "This duplicates another issue"
   },
   {
     "name": "need-review",
@@ -145,23 +145,23 @@
     "description": "Ready for work to begin"
   },
   {
-    "name": "parent",
-    "color": "C65D0A",
-    "description": "Tracks a larger body of work with child issues"
+    "name": "help wanted",
+    "color": "FFD700",
+    "description": "Contributions or additional assistance welcome"
   },
   {
-    "name": "child",
-    "color": "FFC078",
-    "description": "A subtask belonging to a parent issue"
+    "name": "question",
+    "color": "FFF3B0",
+    "description": "A question or clarification is needed"
   },
   {
-    "name": "blocking",
-    "color": "B91C1C",
-    "description": "Blocks other work from progressing"
+    "name": "wontfix",
+    "color": "57534E",
+    "description": "This will not be worked on"
   },
   {
-    "name": "blocked",
-    "color": "9A3412",
-    "description": "Blocked by other work"
+    "name": "duplicate",
+    "color": "A8A29E",
+    "description": "This duplicates another issue"
   }
 ]

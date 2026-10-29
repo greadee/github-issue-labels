@@ -139,6 +139,8 @@ to see its usage.
 ## Label reference
 
 The template is available in `labels.json` and the category files under `labels/`.
+Labels are listed in category order: priority, size, relationships, type, state,
+and collab.
 
 | Label | Hex color | Description |
 | --- | --- | --- |
@@ -153,28 +155,28 @@ The template is available in `labels.json` and the category files under `labels/
 | `M` | `#3B82F6` | Medium effort or scope |
 | `L` | `#2563EB` | Large effort or scope |
 | `XL` | `#1E3A8A` | Extra large effort or scope |
-| `chore` | `#6B7280` | Routine maintenance or housekeeping |
-| `bug` | `#703070` | Something is not working as expected |
-| `feature` | `#BF7FBF` | New functionality |
-| `enhancement` | `#68A9E8` | Improvement to existing functionality |
-| `documentation` | `#153E75` | Documentation additions or improvements |
-| `testing` | `#8B5CF6` | Tests, test coverage, or quality verification |
-| `revision` | `#A4C8F0` | Changes or rework to existing implementation |
-| `design` | `#397BC6` | Design, user experience, or architecture work |
-| `ci/cd` | `#FFFDD0` | Continuous integration, delivery, or deployment |
-| `tracking` | `#2A9D8F` | Tracks ongoing work, progress, or follow-up |
-| `help wanted` | `#FFD700` | Contributions or additional assistance welcome |
-| `question` | `#FFF3B0` | A question or clarification is needed |
-| `wontfix` | `#57534E` | This will not be worked on |
-| `duplicate` | `#A8A29E` | This duplicates another issue |
-| `need-review` | `#F59E0B` | Awaiting review |
-| `in-progress` | `#238636` | Work is actively underway |
-| `can-close` | `#0E7490` | Work is complete and can be closed |
-| `ready` | `#A7E8A1` | Ready for work to begin |
 | `parent` | `#C65D0A` | Tracks a larger body of work with child issues |
 | `child` | `#FFC078` | A subtask belonging to a parent issue |
 | `blocking` | `#B91C1C` | Blocks other work from progressing |
 | `blocked` | `#9A3412` | Blocked by other work |
+| `tracking` | `#2A9D8F` | Tracks ongoing work, progress, or follow-up |
+| `documentation` | `#153E75` | Documentation additions or improvements |
+| `design` | `#397BC6` | Design, user experience, or architecture work |
+| `revision` | `#A4C8F0` | Changes or rework to existing implementation |
+| `testing` | `#8B5CF6` | Tests, test coverage, or quality verification |
+| `bug` | `#703070` | Something is not working as expected |
+| `feature` | `#BF7FBF` | New functionality |
+| `enhancement` | `#68A9E8` | Improvement to existing functionality |
+| `chore` | `#6B7280` | Routine maintenance or housekeeping |
+| `ci/cd` | `#FFFDD0` | Continuous integration, delivery, or deployment |
+| `need-review` | `#F59E0B` | Awaiting review |
+| `in-progress` | `#238636` | Work is actively underway |
+| `can-close` | `#0E7490` | Work is complete and can be closed |
+| `ready` | `#A7E8A1` | Ready for work to begin |
+| `help wanted` | `#FFD700` | Contributions or additional assistance welcome |
+| `question` | `#FFF3B0` | A question or clarification is needed |
+| `wontfix` | `#57534E` | This will not be worked on |
+| `duplicate` | `#A8A29E` | This duplicates another issue |
 
 ## Customize the template
 
