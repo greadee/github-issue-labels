@@ -1,27 +1,27 @@
 [
   {
     "name": "low",
-    "color": "F8B4B4",
+    "color": "FCA5A5",
     "description": "Low priority"
   },
   {
     "name": "medium",
-    "color": "EF7373",
+    "color": "F87171",
     "description": "Medium priority"
   },
   {
     "name": "high",
-    "color": "DC3434",
+    "color": "EF4444",
     "description": "High priority"
   },
   {
     "name": "critical",
-    "color": "990F1F",
+    "color": "B91C1C",
     "description": "Critical priority; requires immediate attention"
   },
   {
     "name": "now",
-    "color": "E11D48",
+    "color": "DC2626",
     "description": "Needs to be addressed now"
   },
   {
@@ -56,37 +56,37 @@
   },
   {
     "name": "parent",
-    "color": "C65D0A",
+    "color": "C2410C",
     "description": "Tracks a larger body of work with child issues"
   },
   {
     "name": "child",
-    "color": "FFC078",
+    "color": "FFEDD5",
     "description": "A subtask belonging to a parent issue"
   },
   {
     "name": "blocking",
-    "color": "B91C1C",
+    "color": "F97316",
     "description": "Blocks other work from progressing"
   },
   {
     "name": "blocked",
-    "color": "9A3412",
+    "color": "FED7AA",
     "description": "Blocked by other work"
   },
   {
     "name": "tracking",
-    "color": "4D7C0F",
+    "color": "22C55E",
     "description": "Tracks ongoing work, progress, or follow-up"
   },
   {
     "name": "documentation",
-    "color": "7C2D12",
+    "color": "581C87",
     "description": "Documentation additions or improvements"
   },
   {
     "name": "design",
-    "color": "7E22CE",
+    "color": "A855F7",
     "description": "Design, user experience, or architecture work"
   },
   {
@@ -126,22 +126,22 @@
   },
   {
     "name": "need-review",
-    "color": "F59E0B",
+    "color": "BBF7D0",
     "description": "Awaiting review"
   },
   {
     "name": "in-progress",
-    "color": "238636",
+    "color": "4ADE80",
     "description": "Work is actively underway"
   },
   {
     "name": "can-close",
-    "color": "A21CAF",
+    "color": "16A34A",
     "description": "Work is complete and can be closed"
   },
   {
     "name": "ready",
-    "color": "A7E8A1",
+    "color": "86EFAC",
     "description": "Ready for work to begin"
   },
   {

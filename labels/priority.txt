@@ -1,7 +1,7 @@
 # Priority labels, ordered from lowest to highest urgency.
-low|F8B4B4|Low priority
-medium|EF7373|Medium priority
-high|DC3434|High priority
-critical|990F1F|Critical priority; requires immediate attention
-now|E11D48|Needs to be addressed now
+low|FCA5A5|Low priority
+medium|F87171|Medium priority
+high|EF4444|High priority
+critical|B91C1C|Critical priority; requires immediate attention
+now|DC2626|Needs to be addressed now
 deferred|9CA3AF|Postponed for later consideration

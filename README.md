@@ -151,11 +151,11 @@ Labels are grouped by category in application order.
 
 | Label | Hex color | Description |
 | --- | --- | --- |
-| `low` | `#F8B4B4` | Low priority |
-| `medium` | `#EF7373` | Medium priority |
-| `high` | `#DC3434` | High priority |
-| `critical` | `#990F1F` | Critical priority; requires immediate attention |
-| `now` | `#E11D48` | Needs to be addressed now |
+| `low` | `#FCA5A5` | Low priority |
+| `medium` | `#F87171` | Medium priority |
+| `high` | `#EF4444` | High priority |
+| `critical` | `#B91C1C` | Critical priority; requires immediate attention |
+| `now` | `#DC2626` | Needs to be addressed now |
 | `deferred` | `#9CA3AF` | Postponed for later consideration |
 
 ### Size (`--size`)
@@ -172,18 +172,18 @@ Labels are grouped by category in application order.
 
 | Label | Hex color | Description |
 | --- | --- | --- |
-| `parent` | `#C65D0A` | Tracks a larger body of work with child issues |
-| `child` | `#FFC078` | A subtask belonging to a parent issue |
-| `blocking` | `#B91C1C` | Blocks other work from progressing |
-| `blocked` | `#9A3412` | Blocked by other work |
+| `parent` | `#C2410C` | Tracks a larger body of work with child issues |
+| `child` | `#FFEDD5` | A subtask belonging to a parent issue |
+| `blocking` | `#F97316` | Blocks other work from progressing |
+| `blocked` | `#FED7AA` | Blocked by other work |
 
 ### Type (`--type`)
 
 | Label | Hex color | Description |
 | --- | --- | --- |
-| `tracking` | `#4D7C0F` | Tracks ongoing work, progress, or follow-up |
-| `documentation` | `#7C2D12` | Documentation additions or improvements |
-| `design` | `#7E22CE` | Design, user experience, or architecture work |
+| `tracking` | `#22C55E` | Tracks ongoing work, progress, or follow-up |
+| `documentation` | `#581C87` | Documentation additions or improvements |
+| `design` | `#A855F7` | Design, user experience, or architecture work |
 | `revision` | `#E9D5FF` | Changes or rework to existing implementation |
 | `testing` | `#9333EA` | Tests, test coverage, or quality verification |
 | `bug` | `#703070` | Something is not working as expected |
@@ -196,10 +196,10 @@ Labels are grouped by category in application order.
 
 | Label | Hex color | Description |
 | --- | --- | --- |
-| `need-review` | `#F59E0B` | Awaiting review |
-| `in-progress` | `#238636` | Work is actively underway |
-| `can-close` | `#A21CAF` | Work is complete and can be closed |
-| `ready` | `#A7E8A1` | Ready for work to begin |
+| `need-review` | `#BBF7D0` | Awaiting review |
+| `in-progress` | `#4ADE80` | Work is actively underway |
+| `can-close` | `#16A34A` | Work is complete and can be closed |
+| `ready` | `#86EFAC` | Ready for work to begin |
 
 `tracking` is shared with the type category.
 
