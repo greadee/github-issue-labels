@@ -1,0 +1,5 @@
+# The current state of an issue or pull request.
+ready|BBF7D0|Ready for work to begin
+in-progress|86EFAC|Work is actively underway
+need-review|4ADE80|Awaiting review
+can-close|22C55E|Work is complete and can be closed

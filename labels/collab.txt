@@ -1,0 +1,5 @@
+# Collaboration and triage labels.
+help wanted|FFD700|Contributions or additional assistance welcome
+question|FFF3B0|A question or clarification is needed
+wontfix|57534E|This will not be worked on
+duplicate|A8A29E|This duplicates another issue

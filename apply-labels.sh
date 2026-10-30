@@ -1,47 +1,107 @@
 #!/usr/bin/env bash
 # Create or update the template labels; preserve other labels.
-# Usage: ./apply-labels.sh [--dry-run] OWNER/REPO [OWNER/REPO ...]
+# Usage: ./apply-labels.sh [--dry-run] [--CATEGORY ...] OWNER/REPO [OWNER/REPO ...]
 # Requires GitHub CLI (gh) authenticated with: gh auth login
 set -euo pipefail
 
+script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+labels_dir="$script_dir/labels"
+category_order=(priority size relationships type state collab)
+
+usage() {
+  cat <<EOF
+Usage: $0 [--dry-run] [--CATEGORY ...] OWNER/REPO [OWNER/REPO ...]
+
+Without a category option, every category is applied.
+Available categories:
+EOF
+  local category
+  for category in "${category_order[@]}"; do
+    if [[ -f "$labels_dir/$category.txt" ]]; then
+      printf '  --%s\n' "$category"
+    fi
+  done
+  cat <<'EOF'
+
+Use --all to reset the selection to every category.
+EOF
+}
+
 dry_run=false
-if [[ "${1:-}" == "--dry-run" ]]; then dry_run=true; shift; fi
-if [[ $# -eq 0 || "${1:-}" == "--help" ]]; then
-  echo "Usage: $0 [--dry-run] OWNER/REPO [OWNER/REPO ...]"
+apply_all=true
+declare -A selected=()
+repos=()
+
+while (($#)); do
+  case "$1" in
+    --dry-run)
+      dry_run=true
+      ;;
+    --help|-h)
+      usage
+      exit 0
+      ;;
+    --all)
+      selected=()
+      apply_all=true
+      ;;
+    --*)
+      category=${1#--}
+      valid=false
+      for candidate in "${category_order[@]}"; do
+        if [[ "$category" == "$candidate" && -f "$labels_dir/$category.txt" ]]; then
+          valid=true
+          break
+        fi
+      done
+      if [[ "$valid" == false ]]; then
+        echo "Unknown option or category: $1" >&2
+        usage >&2
+        exit 1
+      fi
+      selected["$category"]=1
+      apply_all=false
+      ;;
+    *)
+      repos+=("$1")
+      ;;
+  esac
+  shift
+done
+
+if ((${#repos[@]} == 0)); then
+  usage
   exit 0
 fi
+
 command -v gh >/dev/null || { echo "Install GitHub CLI (gh) first." >&2; exit 1; }
-for repo in "$@"; do
+for repo in "${repos[@]}"; do
   [[ "$repo" =~ ^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$ ]] || { echo "Expected OWNER/REPO: $repo" >&2; exit 1; }
 done
-for repo in "$@"; do
-  while IFS='|' read -r name color description; do
+
+apply_labels() {
+  local repo=$1 file=$2
+  local name color description
+  while IFS='|' read -r name color description || [[ -n "$name" ]]; do
+    [[ -z "$name" || "$name" == \#* ]] && continue
+    [[ -n "${seen[$name]:-}" ]] && continue
+    seen[$name]=1
     if "$dry_run"; then
       printf 'gh label create %q --repo %q --color %q --description %q --force\n' "$name" "$repo" "$color" "$description"
     else
       gh label create "$name" --repo "$repo" --color "$color" --description "$description" --force
     fi
-  done <<'LABELS'
-low|F8B4B4|Low priority
-medium|EF7373|Medium priority
-high|DC3434|High priority
-critical|990F1F|Critical priority; requires immediate attention
-deferred|9CA3AF|Postponed for later consideration
-chore|6B7280|Routine maintenance or housekeeping
-bug|703070|Something is not working as expected
-feature|BF7FBF|New functionality
-enhancement|68A9E8|Improvement to existing functionality
-documentation|153E75|Documentation additions or improvements
-testing|8B5CF6|Tests, test coverage, or quality verification
-revision|A4C8F0|Changes or rework to existing implementation
-design|397BC6|Design, user experience, or architecture work
-ci/cd|FFFDD0|Continuous integration, delivery, or deployment
-tracking|2A9D8F|Tracks ongoing work, progress, or follow-up
-help wanted|FFD700|Contributions or additional assistance welcome
-question|FFF3B0|A question or clarification is needed
-in-progress|238636|Work is actively underway
-ready|A7E8A1|Ready for work to begin
-parent|C65D0A|Tracks a larger body of work with child issues
-child|FFC078|A subtask belonging to a parent issue
-LABELS
+  done < "$file"
+}
+
+for repo in "${repos[@]}"; do
+  declare -A seen=()
+  for category in "${category_order[@]}"; do
+    if [[ "$apply_all" == false && -z "${selected[$category]:-}" ]]; then
+      continue
+    fi
+    file="$labels_dir/$category.txt"
+    [[ -f "$file" ]] || continue
+    apply_labels "$repo" "$file"
+  done
 done

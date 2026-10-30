@@ -1,23 +1,28 @@
 [
   {
     "name": "low",
-    "color": "F8B4B4",
+    "color": "FCA5A5",
     "description": "Low priority"
   },
   {
     "name": "medium",
-    "color": "EF7373",
+    "color": "F87171",
     "description": "Medium priority"
   },
   {
     "name": "high",
-    "color": "DC3434",
+    "color": "EF4444",
     "description": "High priority"
   },
   {
     "name": "critical",
-    "color": "990F1F",
+    "color": "B91C1C",
     "description": "Critical priority; requires immediate attention"
+  },
+  {
+    "name": "now",
+    "color": "DC2626",
+    "description": "Needs to be addressed now"
   },
   {
     "name": "deferred",
@@ -25,13 +30,78 @@
     "description": "Postponed for later consideration"
   },
   {
-    "name": "chore",
-    "color": "6B7280",
-    "description": "Routine maintenance or housekeeping"
+    "name": "XS",
+    "color": "60A5FA",
+    "description": "Extra small effort or scope"
+  },
+  {
+    "name": "S",
+    "color": "3B82F6",
+    "description": "Small effort or scope"
+  },
+  {
+    "name": "M",
+    "color": "2563EB",
+    "description": "Medium effort or scope"
+  },
+  {
+    "name": "L",
+    "color": "1D4ED8",
+    "description": "Large effort or scope"
+  },
+  {
+    "name": "XL",
+    "color": "1E3A8A",
+    "description": "Extra large effort or scope"
+  },
+  {
+    "name": "parent",
+    "color": "FDBA74",
+    "description": "Tracks a larger body of work with child issues"
+  },
+  {
+    "name": "child",
+    "color": "FFEDD5",
+    "description": "A subtask belonging to a parent issue"
+  },
+  {
+    "name": "blocking",
+    "color": "FF6B00",
+    "description": "Blocks other work from progressing"
+  },
+  {
+    "name": "blocked",
+    "color": "9A3412",
+    "description": "Blocked by other work"
+  },
+  {
+    "name": "tracking",
+    "color": "16A34A",
+    "description": "Tracks ongoing work, progress, or follow-up"
+  },
+  {
+    "name": "documentation",
+    "color": "581C87",
+    "description": "Documentation additions or improvements"
+  },
+  {
+    "name": "design",
+    "color": "A855F7",
+    "description": "Design, user experience, or architecture work"
+  },
+  {
+    "name": "revision",
+    "color": "C084FC",
+    "description": "Changes or rework to existing implementation"
+  },
+  {
+    "name": "testing",
+    "color": "DB2777",
+    "description": "Tests, test coverage, or quality verification"
   },
   {
     "name": "bug",
-    "color": "703070",
+    "color": "C026D3",
     "description": "Something is not working as expected"
   },
   {
@@ -40,39 +110,34 @@
     "description": "New functionality"
   },
   {
-    "name": "enhancement",
-    "color": "68A9E8",
-    "description": "Improvement to existing functionality"
-  },
-  {
-    "name": "documentation",
-    "color": "153E75",
-    "description": "Documentation additions or improvements"
-  },
-  {
-    "name": "testing",
-    "color": "8B5CF6",
-    "description": "Tests, test coverage, or quality verification"
-  },
-  {
-    "name": "revision",
-    "color": "A4C8F0",
-    "description": "Changes or rework to existing implementation"
-  },
-  {
-    "name": "design",
-    "color": "397BC6",
-    "description": "Design, user experience, or architecture work"
+    "name": "chore",
+    "color": "DBEAFE",
+    "description": "Routine maintenance or housekeeping"
   },
   {
     "name": "ci/cd",
-    "color": "FFFDD0",
+    "color": "BFDBFE",
     "description": "Continuous integration, delivery, or deployment"
   },
   {
-    "name": "tracking",
-    "color": "2A9D8F",
-    "description": "Tracks ongoing work, progress, or follow-up"
+    "name": "ready",
+    "color": "BBF7D0",
+    "description": "Ready for work to begin"
+  },
+  {
+    "name": "in-progress",
+    "color": "86EFAC",
+    "description": "Work is actively underway"
+  },
+  {
+    "name": "need-review",
+    "color": "4ADE80",
+    "description": "Awaiting review"
+  },
+  {
+    "name": "can-close",
+    "color": "22C55E",
+    "description": "Work is complete and can be closed"
   },
   {
     "name": "help wanted",
@@ -85,23 +150,13 @@
     "description": "A question or clarification is needed"
   },
   {
-    "name": "in-progress",
-    "color": "238636",
-    "description": "Work is actively underway"
+    "name": "wontfix",
+    "color": "57534E",
+    "description": "This will not be worked on"
   },
   {
-    "name": "ready",
-    "color": "A7E8A1",
-    "description": "Ready for work to begin"
-  },
-  {
-    "name": "parent",
-    "color": "C65D0A",
-    "description": "Tracks a larger body of work with child issues"
-  },
-  {
-    "name": "child",
-    "color": "FFC078",
-    "description": "A subtask belonging to a parent issue"
+    "name": "duplicate",
+    "color": "A8A29E",
+    "description": "This duplicates another issue"
   }
 ]

@@ -1,6 +1,6 @@
 # GitHub labels template
 
-A reusable set of 21 GitHub issue and pull request labels, with two Bash scripts
+A reusable set of 32 GitHub issue and pull request labels, with two Bash scripts
 to apply the template or clear an existing repository's labels.
 
 ## Previews
@@ -13,19 +13,21 @@ to apply the template or clear an existing repository's labels.
 
 ![GitHub label components in dark and light themes](github-label-pills.png)
 
-This preview uses GitHub's component markup and stylesheet captured on October 20,
-2026. GitHub's appearance can change with future updates, theme, font, and context.
-Both previews are lossless PNG files.
+Both previews are lossless PNG files generated from the current category files.
+Labels are grouped by priority, size, relationships, type, state, and collaboration,
+matching the order used by `apply-labels.sh`. GitHub's appearance can change with
+future updates, theme, font, and context.
 
 ## Files
 
 | File | Purpose |
 | --- | --- |
-| [labels.json](labels.json) | Portable JSON template containing all 21 label names, colors, and descriptions. |
-| [apply-labels.sh](apply-labels.sh) | Contains the template and creates or updates its labels. |
+| [labels.json](labels.json) | Portable JSON template containing all 32 label names, colors, and descriptions. |
+| [labels/](labels) | Category files that contain the label definitions used by the apply script. |
+| [apply-labels.sh](apply-labels.sh) | Creates or updates labels from the category files. |
 | [clear-labels.sh](clear-labels.sh) | Deletes every label in the selected repositories. |
-| [github-label-colors.png](github-label-colors.png) | Lossless color chart with names and hex codes, ordered by color. |
-| [github-label-pills.png](github-label-pills.png) | Lossless browser-rendered preview using GitHub's label component styles in dark and light themes. |
+| [github-label-colors.png](github-label-colors.png) | Lossless color chart with names and hex codes, ordered by category. |
+| [github-label-pills.png](github-label-pills.png) | Lossless preview using GitHub-style label components in dark and light themes, ordered by category. |
 
 ## Requirements
 
@@ -68,6 +70,39 @@ If executable permissions were lost when copying the files, run:
 chmod +x apply-labels.sh clear-labels.sh
 ```
 
+## Apply a subset of labels
+
+By default `apply-labels.sh` applies every category. Pass one or more category
+options to apply only those labels:
+
+```sh
+./apply-labels.sh --priority --state OWNER/REPO
+./apply-labels.sh --size OWNER/REPO
+```
+
+Available categories, in application order:
+
+| Option | Labels |
+| --- | --- |
+| `--priority` | low, medium, high, critical, now, deferred |
+| `--size` | XS, S, M, L, XL |
+| `--relationships` | parent, child, blocking, blocked |
+| `--type` | tracking, documentation, design, revision, testing, bug, feature, chore, ci/cd |
+| `--state` | ready, in-progress, need-review, can-close |
+| `--collab` | help wanted, question, wontfix, duplicate |
+
+`documentation` is the existing name for docs, and `medium` is the existing name
+for med. Categories are applied in the order shown, regardless of the order of
+the options. A label shared by multiple selected categories is applied once.
+
+Use `--all` to reset the selection to every category:
+
+```sh
+./apply-labels.sh --priority --all OWNER/REPO
+```
+
+Category options work with `--dry-run` and multiple repositories.
+
 ## Replace all existing labels
 
 **Clearing deletes every repository label, including automatically generated labels,
@@ -104,45 +139,88 @@ to see its usage.
 
 ## Label reference
 
-The template is available in `labels.json` and embedded in `apply-labels.sh`.
-`blocked` is intentionally excluded.
+
+
+The template is available in `labels.json` and the category files under `labels/`.
+
+Labels are grouped by category in application order.
+
+
+
+### Priority (`--priority`)
 
 | Label | Hex color | Description |
 | --- | --- | --- |
-| `low` | `#F8B4B4` | Low priority |
-| `medium` | `#EF7373` | Medium priority |
-| `high` | `#DC3434` | High priority |
-| `critical` | `#990F1F` | Critical priority; requires immediate attention |
+| `low` | `#FCA5A5` | Low priority |
+| `medium` | `#F87171` | Medium priority |
+| `high` | `#EF4444` | High priority |
+| `critical` | `#B91C1C` | Critical priority; requires immediate attention |
+| `now` | `#DC2626` | Needs to be addressed now |
 | `deferred` | `#9CA3AF` | Postponed for later consideration |
-| `chore` | `#6B7280` | Routine maintenance or housekeeping |
-| `bug` | `#703070` | Something is not working as expected |
+
+### Size (`--size`)
+
+| Label | Hex color | Description |
+| --- | --- | --- |
+| `XS` | `#60A5FA` | Extra small effort or scope |
+| `S` | `#3B82F6` | Small effort or scope |
+| `M` | `#2563EB` | Medium effort or scope |
+| `L` | `#1D4ED8` | Large effort or scope |
+| `XL` | `#1E3A8A` | Extra large effort or scope |
+
+### Relationships (`--relationships`)
+
+| Label | Hex color | Description |
+| --- | --- | --- |
+| `parent` | `#FDBA74` | Tracks a larger body of work with child issues |
+| `child` | `#FFEDD5` | A subtask belonging to a parent issue |
+| `blocking` | `#FF6B00` | Blocks other work from progressing |
+| `blocked` | `#9A3412` | Blocked by other work |
+
+### Type (`--type`)
+
+| Label | Hex color | Description |
+| --- | --- | --- |
+| `tracking` | `#16A34A` | Tracks ongoing work, progress, or follow-up |
+| `documentation` | `#581C87` | Documentation additions or improvements |
+| `design` | `#A855F7` | Design, user experience, or architecture work |
+| `revision` | `#C084FC` | Changes or rework to existing implementation |
+| `testing` | `#DB2777` | Tests, test coverage, or quality verification |
+| `bug` | `#C026D3` | Something is not working as expected |
 | `feature` | `#BF7FBF` | New functionality |
-| `enhancement` | `#68A9E8` | Improvement to existing functionality |
-| `documentation` | `#153E75` | Documentation additions or improvements |
-| `testing` | `#8B5CF6` | Tests, test coverage, or quality verification |
-| `revision` | `#A4C8F0` | Changes or rework to existing implementation |
-| `design` | `#397BC6` | Design, user experience, or architecture work |
-| `ci/cd` | `#FFFDD0` | Continuous integration, delivery, or deployment |
-| `tracking` | `#2A9D8F` | Tracks ongoing work, progress, or follow-up |
+| `chore` | `#DBEAFE` | Routine maintenance or housekeeping |
+| `ci/cd` | `#BFDBFE` | Continuous integration, delivery, or deployment |
+
+### State (`--state`)
+
+| Label | Hex color | Description |
+| --- | --- | --- |
+| `ready` | `#BBF7D0` | Ready for work to begin |
+| `in-progress` | `#86EFAC` | Work is actively underway |
+| `need-review` | `#4ADE80` | Awaiting review |
+| `can-close` | `#22C55E` | Work is complete and can be closed |
+
+### Collaboration (`--collab`)
+
+| Label | Hex color | Description |
+| --- | --- | --- |
 | `help wanted` | `#FFD700` | Contributions or additional assistance welcome |
 | `question` | `#FFF3B0` | A question or clarification is needed |
-| `in-progress` | `#238636` | Work is actively underway |
-| `ready` | `#A7E8A1` | Ready for work to begin |
-| `parent` | `#C65D0A` | Tracks a larger body of work with child issues |
-| `child` | `#FFC078` | A subtask belonging to a parent issue |
-
+| `wontfix` | `#57534E` | This will not be worked on |
+| `duplicate` | `#A8A29E` | This duplicates another issue |
 ## Customize the template
 
-Edit the lines between `done <<'LABELS'` and the closing `LABELS` in
-`apply-labels.sh`. Each line has this format:
+Edit the category files under `labels/`. Each line has this format:
 
 ```text
 name|RRGGBB|Description
 ```
 
+Categories are applied in this order: priority, size, relationships, type, state,
+and collab. A label may appear in more than one category; it is applied only once.
 Use a six-digit hex color without `#`. Keep each label on one line and avoid `|`
-in names or descriptions. Keep `labels.json` synchronized with the embedded template. Reapply the script
-to update your repositories.
+in names or descriptions. Keep `labels.json` synchronized with the category files.
+Reapply the script to update your repositories.
 Removing a template entry does not delete an existing repository label.
 The PNG previews are static exports and must be regenerated after template changes.
 
