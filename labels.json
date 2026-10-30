@@ -31,22 +31,22 @@
   },
   {
     "name": "XS",
-    "color": "DBEAFE",
+    "color": "60A5FA",
     "description": "Extra small effort or scope"
   },
   {
     "name": "S",
-    "color": "93C5FD",
+    "color": "3B82F6",
     "description": "Small effort or scope"
   },
   {
     "name": "M",
-    "color": "3B82F6",
+    "color": "2563EB",
     "description": "Medium effort or scope"
   },
   {
     "name": "L",
-    "color": "2563EB",
+    "color": "1D4ED8",
     "description": "Large effort or scope"
   },
   {
@@ -76,7 +76,7 @@
   },
   {
     "name": "tracking",
-    "color": "22C55E",
+    "color": "16A34A",
     "description": "Tracks ongoing work, progress, or follow-up"
   },
   {
@@ -91,7 +91,7 @@
   },
   {
     "name": "revision",
-    "color": "E9D5FF",
+    "color": "C084FC",
     "description": "Changes or rework to existing implementation"
   },
   {
@@ -110,39 +110,34 @@
     "description": "New functionality"
   },
   {
-    "name": "enhancement",
-    "color": "F9A8D4",
-    "description": "Improvement to existing functionality"
-  },
-  {
     "name": "chore",
-    "color": "6B7280",
+    "color": "DBEAFE",
     "description": "Routine maintenance or housekeeping"
   },
   {
     "name": "ci/cd",
-    "color": "FFFDD0",
+    "color": "BFDBFE",
     "description": "Continuous integration, delivery, or deployment"
   },
   {
-    "name": "need-review",
+    "name": "ready",
     "color": "BBF7D0",
-    "description": "Awaiting review"
+    "description": "Ready for work to begin"
   },
   {
     "name": "in-progress",
-    "color": "4ADE80",
+    "color": "86EFAC",
     "description": "Work is actively underway"
   },
   {
-    "name": "can-close",
-    "color": "16A34A",
-    "description": "Work is complete and can be closed"
+    "name": "need-review",
+    "color": "4ADE80",
+    "description": "Awaiting review"
   },
   {
-    "name": "ready",
-    "color": "86EFAC",
-    "description": "Ready for work to begin"
+    "name": "can-close",
+    "color": "22C55E",
+    "description": "Work is complete and can be closed"
   },
   {
     "name": "help wanted",

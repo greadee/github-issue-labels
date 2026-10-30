@@ -1,7 +1,5 @@
 # The current state of an issue or pull request.
-need-review|BBF7D0|Awaiting review
-in-progress|4ADE80|Work is actively underway
-# Shared with the type category.
-tracking|22C55E|Tracks ongoing work, progress, or follow-up
-can-close|16A34A|Work is complete and can be closed
-ready|86EFAC|Ready for work to begin
+ready|BBF7D0|Ready for work to begin
+in-progress|86EFAC|Work is actively underway
+need-review|4ADE80|Awaiting review
+can-close|22C55E|Work is complete and can be closed

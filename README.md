@@ -1,6 +1,6 @@
 # GitHub labels template
 
-A reusable set of 33 GitHub issue and pull request labels, with two Bash scripts
+A reusable set of 32 GitHub issue and pull request labels, with two Bash scripts
 to apply the template or clear an existing repository's labels.
 
 ## Previews
@@ -22,7 +22,7 @@ future updates, theme, font, and context.
 
 | File | Purpose |
 | --- | --- |
-| [labels.json](labels.json) | Portable JSON template containing all 33 label names, colors, and descriptions. |
+| [labels.json](labels.json) | Portable JSON template containing all 32 label names, colors, and descriptions. |
 | [labels/](labels) | Category files that contain the label definitions used by the apply script. |
 | [apply-labels.sh](apply-labels.sh) | Creates or updates labels from the category files. |
 | [clear-labels.sh](clear-labels.sh) | Deletes every label in the selected repositories. |
@@ -87,8 +87,8 @@ Available categories, in application order:
 | `--priority` | low, medium, high, critical, now, deferred |
 | `--size` | XS, S, M, L, XL |
 | `--relationships` | parent, child, blocking, blocked |
-| `--type` | tracking, documentation, design, revision, testing, bug, feature, enhancement, chore, ci/cd |
-| `--state` | need-review, in-progress, tracking, can-close, ready |
+| `--type` | tracking, documentation, design, revision, testing, bug, feature, chore, ci/cd |
+| `--state` | ready, in-progress, need-review, can-close |
 | `--collab` | help wanted, question, wontfix, duplicate |
 
 `documentation` is the existing name for docs, and `medium` is the existing name
@@ -162,10 +162,10 @@ Labels are grouped by category in application order.
 
 | Label | Hex color | Description |
 | --- | --- | --- |
-| `XS` | `#DBEAFE` | Extra small effort or scope |
-| `S` | `#93C5FD` | Small effort or scope |
-| `M` | `#3B82F6` | Medium effort or scope |
-| `L` | `#2563EB` | Large effort or scope |
+| `XS` | `#60A5FA` | Extra small effort or scope |
+| `S` | `#3B82F6` | Small effort or scope |
+| `M` | `#2563EB` | Medium effort or scope |
+| `L` | `#1D4ED8` | Large effort or scope |
 | `XL` | `#1E3A8A` | Extra large effort or scope |
 
 ### Relationships (`--relationships`)
@@ -181,27 +181,24 @@ Labels are grouped by category in application order.
 
 | Label | Hex color | Description |
 | --- | --- | --- |
-| `tracking` | `#22C55E` | Tracks ongoing work, progress, or follow-up |
+| `tracking` | `#16A34A` | Tracks ongoing work, progress, or follow-up |
 | `documentation` | `#581C87` | Documentation additions or improvements |
 | `design` | `#A855F7` | Design, user experience, or architecture work |
-| `revision` | `#E9D5FF` | Changes or rework to existing implementation |
+| `revision` | `#C084FC` | Changes or rework to existing implementation |
 | `testing` | `#DB2777` | Tests, test coverage, or quality verification |
 | `bug` | `#C026D3` | Something is not working as expected |
 | `feature` | `#BF7FBF` | New functionality |
-| `enhancement` | `#F9A8D4` | Improvement to existing functionality |
-| `chore` | `#6B7280` | Routine maintenance or housekeeping |
-| `ci/cd` | `#FFFDD0` | Continuous integration, delivery, or deployment |
+| `chore` | `#DBEAFE` | Routine maintenance or housekeeping |
+| `ci/cd` | `#BFDBFE` | Continuous integration, delivery, or deployment |
 
 ### State (`--state`)
 
 | Label | Hex color | Description |
 | --- | --- | --- |
-| `need-review` | `#BBF7D0` | Awaiting review |
-| `in-progress` | `#4ADE80` | Work is actively underway |
-| `can-close` | `#16A34A` | Work is complete and can be closed |
-| `ready` | `#86EFAC` | Ready for work to begin |
-
-`tracking` is shared with the type category.
+| `ready` | `#BBF7D0` | Ready for work to begin |
+| `in-progress` | `#86EFAC` | Work is actively underway |
+| `need-review` | `#4ADE80` | Awaiting review |
+| `can-close` | `#22C55E` | Work is complete and can be closed |
 
 ### Collaboration (`--collab`)
 
