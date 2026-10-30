@@ -13,9 +13,10 @@ to apply the template or clear an existing repository's labels.
 
 ![GitHub label components in dark and light themes](github-label-pills.png)
 
-This preview uses GitHub's component markup and stylesheet captured on October 20,
-2026. GitHub's appearance can change with future updates, theme, font, and context.
-Both previews are lossless PNG files.
+Both previews are lossless PNG files generated from the current category files.
+Labels are grouped by priority, size, relationships, type, state, and collaboration,
+matching the order used by `apply-labels.sh`. GitHub's appearance can change with
+future updates, theme, font, and context.
 
 ## Files
 
@@ -25,8 +26,8 @@ Both previews are lossless PNG files.
 | [labels/](labels) | Category files that contain the label definitions used by the apply script. |
 | [apply-labels.sh](apply-labels.sh) | Creates or updates labels from the category files. |
 | [clear-labels.sh](clear-labels.sh) | Deletes every label in the selected repositories. |
-| [github-label-colors.png](github-label-colors.png) | Lossless color chart with names and hex codes, ordered by color. |
-| [github-label-pills.png](github-label-pills.png) | Lossless browser-rendered preview using GitHub's label component styles in dark and light themes. |
+| [github-label-colors.png](github-label-colors.png) | Lossless color chart with names and hex codes, ordered by category. |
+| [github-label-pills.png](github-label-pills.png) | Lossless preview using GitHub-style label components in dark and light themes, ordered by category. |
 
 ## Requirements
 
@@ -139,8 +140,10 @@ to see its usage.
 ## Label reference
 
 The template is available in `labels.json` and the category files under `labels/`.
-Labels are listed in category order: priority, size, relationships, type, state,
-and collab.
+
+Labels are grouped by category in application order.
+
+### Priority (`--priority`)
 
 | Label | Hex color | Description |
 | --- | --- | --- |
@@ -150,15 +153,30 @@ and collab.
 | `critical` | `#990F1F` | Critical priority; requires immediate attention |
 | `now` | `#E11D48` | Needs to be addressed now |
 | `deferred` | `#9CA3AF` | Postponed for later consideration |
+
+### Size (`--size`)
+
+| Label | Hex color | Description |
+| --- | --- | --- |
 | `XS` | `#DBEAFE` | Extra small effort or scope |
 | `S` | `#93C5FD` | Small effort or scope |
 | `M` | `#3B82F6` | Medium effort or scope |
 | `L` | `#2563EB` | Large effort or scope |
 | `XL` | `#1E3A8A` | Extra large effort or scope |
+
+### Relationships (`--relationships`)
+
+| Label | Hex color | Description |
+| --- | --- | --- |
 | `parent` | `#C65D0A` | Tracks a larger body of work with child issues |
 | `child` | `#FFC078` | A subtask belonging to a parent issue |
 | `blocking` | `#B91C1C` | Blocks other work from progressing |
 | `blocked` | `#9A3412` | Blocked by other work |
+
+### Type (`--type`)
+
+| Label | Hex color | Description |
+| --- | --- | --- |
 | `tracking` | `#2A9D8F` | Tracks ongoing work, progress, or follow-up |
 | `documentation` | `#153E75` | Documentation additions or improvements |
 | `design` | `#397BC6` | Design, user experience, or architecture work |
@@ -169,10 +187,22 @@ and collab.
 | `enhancement` | `#68A9E8` | Improvement to existing functionality |
 | `chore` | `#6B7280` | Routine maintenance or housekeeping |
 | `ci/cd` | `#FFFDD0` | Continuous integration, delivery, or deployment |
+
+### State (`--state`)
+
+| Label | Hex color | Description |
+| --- | --- | --- |
 | `need-review` | `#F59E0B` | Awaiting review |
 | `in-progress` | `#238636` | Work is actively underway |
 | `can-close` | `#0E7490` | Work is complete and can be closed |
 | `ready` | `#A7E8A1` | Ready for work to begin |
+
+`tracking` is shared with the type category.
+
+### Collaboration (`--collab`)
+
+| Label | Hex color | Description |
+| --- | --- | --- |
 | `help wanted` | `#FFD700` | Contributions or additional assistance welcome |
 | `question` | `#FFF3B0` | A question or clarification is needed |
 | `wontfix` | `#57534E` | This will not be worked on |
