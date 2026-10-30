@@ -172,10 +172,10 @@ Labels are grouped by category in application order.
 
 | Label | Hex color | Description |
 | --- | --- | --- |
-| `parent` | `#C2410C` | Tracks a larger body of work with child issues |
+| `parent` | `#FDBA74` | Tracks a larger body of work with child issues |
 | `child` | `#FFEDD5` | A subtask belonging to a parent issue |
-| `blocking` | `#F97316` | Blocks other work from progressing |
-| `blocked` | `#FED7AA` | Blocked by other work |
+| `blocking` | `#FF6B00` | Blocks other work from progressing |
+| `blocked` | `#9A3412` | Blocked by other work |
 
 ### Type (`--type`)
 
@@ -185,8 +185,8 @@ Labels are grouped by category in application order.
 | `documentation` | `#581C87` | Documentation additions or improvements |
 | `design` | `#A855F7` | Design, user experience, or architecture work |
 | `revision` | `#E9D5FF` | Changes or rework to existing implementation |
-| `testing` | `#9333EA` | Tests, test coverage, or quality verification |
-| `bug` | `#703070` | Something is not working as expected |
+| `testing` | `#DB2777` | Tests, test coverage, or quality verification |
+| `bug` | `#C026D3` | Something is not working as expected |
 | `feature` | `#BF7FBF` | New functionality |
 | `enhancement` | `#F9A8D4` | Improvement to existing functionality |
 | `chore` | `#6B7280` | Routine maintenance or housekeeping |

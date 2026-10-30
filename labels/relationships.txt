@@ -1,5 +1,5 @@
 # Relationships between issues.
-parent|C2410C|Tracks a larger body of work with child issues
+parent|FDBA74|Tracks a larger body of work with child issues
 child|FFEDD5|A subtask belonging to a parent issue
-blocking|F97316|Blocks other work from progressing
-blocked|FED7AA|Blocked by other work
+blocking|FF6B00|Blocks other work from progressing
+blocked|9A3412|Blocked by other work
