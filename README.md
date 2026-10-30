@@ -139,9 +139,13 @@ to see its usage.
 
 ## Label reference
 
+
+
 The template is available in `labels.json` and the category files under `labels/`.
 
 Labels are grouped by category in application order.
+
+
 
 ### Priority (`--priority`)
 
@@ -177,14 +181,14 @@ Labels are grouped by category in application order.
 
 | Label | Hex color | Description |
 | --- | --- | --- |
-| `tracking` | `#2A9D8F` | Tracks ongoing work, progress, or follow-up |
-| `documentation` | `#153E75` | Documentation additions or improvements |
-| `design` | `#397BC6` | Design, user experience, or architecture work |
-| `revision` | `#A4C8F0` | Changes or rework to existing implementation |
-| `testing` | `#8B5CF6` | Tests, test coverage, or quality verification |
+| `tracking` | `#4D7C0F` | Tracks ongoing work, progress, or follow-up |
+| `documentation` | `#7C2D12` | Documentation additions or improvements |
+| `design` | `#7E22CE` | Design, user experience, or architecture work |
+| `revision` | `#E9D5FF` | Changes or rework to existing implementation |
+| `testing` | `#9333EA` | Tests, test coverage, or quality verification |
 | `bug` | `#703070` | Something is not working as expected |
 | `feature` | `#BF7FBF` | New functionality |
-| `enhancement` | `#68A9E8` | Improvement to existing functionality |
+| `enhancement` | `#F9A8D4` | Improvement to existing functionality |
 | `chore` | `#6B7280` | Routine maintenance or housekeeping |
 | `ci/cd` | `#FFFDD0` | Continuous integration, delivery, or deployment |
 
@@ -194,7 +198,7 @@ Labels are grouped by category in application order.
 | --- | --- | --- |
 | `need-review` | `#F59E0B` | Awaiting review |
 | `in-progress` | `#238636` | Work is actively underway |
-| `can-close` | `#0E7490` | Work is complete and can be closed |
+| `can-close` | `#A21CAF` | Work is complete and can be closed |
 | `ready` | `#A7E8A1` | Ready for work to begin |
 
 `tracking` is shared with the type category.
@@ -207,7 +211,6 @@ Labels are grouped by category in application order.
 | `question` | `#FFF3B0` | A question or clarification is needed |
 | `wontfix` | `#57534E` | This will not be worked on |
 | `duplicate` | `#A8A29E` | This duplicates another issue |
-
 ## Customize the template
 
 Edit the category files under `labels/`. Each line has this format:

@@ -76,27 +76,27 @@
   },
   {
     "name": "tracking",
-    "color": "2A9D8F",
+    "color": "4D7C0F",
     "description": "Tracks ongoing work, progress, or follow-up"
   },
   {
     "name": "documentation",
-    "color": "153E75",
+    "color": "7C2D12",
     "description": "Documentation additions or improvements"
   },
   {
     "name": "design",
-    "color": "397BC6",
+    "color": "7E22CE",
     "description": "Design, user experience, or architecture work"
   },
   {
     "name": "revision",
-    "color": "A4C8F0",
+    "color": "E9D5FF",
     "description": "Changes or rework to existing implementation"
   },
   {
     "name": "testing",
-    "color": "8B5CF6",
+    "color": "9333EA",
     "description": "Tests, test coverage, or quality verification"
   },
   {
@@ -111,7 +111,7 @@
   },
   {
     "name": "enhancement",
-    "color": "68A9E8",
+    "color": "F9A8D4",
     "description": "Improvement to existing functionality"
   },
   {
@@ -136,7 +136,7 @@
   },
   {
     "name": "can-close",
-    "color": "0E7490",
+    "color": "A21CAF",
     "description": "Work is complete and can be closed"
   },
   {

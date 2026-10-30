@@ -2,6 +2,6 @@
 need-review|F59E0B|Awaiting review
 in-progress|238636|Work is actively underway
 # Shared with the type category.
-tracking|2A9D8F|Tracks ongoing work, progress, or follow-up
-can-close|0E7490|Work is complete and can be closed
+tracking|4D7C0F|Tracks ongoing work, progress, or follow-up
+can-close|A21CAF|Work is complete and can be closed
 ready|A7E8A1|Ready for work to begin
